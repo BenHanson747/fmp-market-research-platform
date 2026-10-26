@@ -1,7 +1,8 @@
-export default function Home() {
-  return (
-    <main>
-      <div>Hello world!</div>
-    </main>
-  );
-}
+import { createDashboardPage } from "@/modules/dashboard";
+
+export default createDashboardPage({
+  title: "Custom Executive Overview",
+  majorIndices: {
+    title: "US Key Indices",
+  },
+});
