@@ -2,6 +2,11 @@
   "name": "fmp-market-research-platform",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@12.2.2",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=12.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -41,5 +46,10 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "duckdb@1.4.4": true,
+    "esbuild@0.28.2": true,
+    "unrs-resolver@1.12.2": true
   }
 }
