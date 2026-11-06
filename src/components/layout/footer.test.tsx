@@ -94,6 +94,7 @@ describe("Footer Component", () => {
         zeroLiability: "Custom Zero Liability Notice.",
         openSource: "Custom MIT attribution.",
       },
+      mainNav: [],
       footerNav: [
         {
           title: "Custom Section",

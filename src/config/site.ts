@@ -1,7 +1,16 @@
 export interface NavItem {
   title: string;
   href: string;
+  description?: string;
   external?: boolean;
+}
+
+export interface MainNavItem {
+  title: string;
+  href?: string;
+  description?: string;
+  external?: boolean;
+  items?: NavItem[];
 }
 
 export interface FooterNavSection {
@@ -28,6 +37,7 @@ export interface SiteConfig {
   description: string;
   links: SiteLinks;
   disclaimer: SiteDisclaimer;
+  mainNav: MainNavItem[];
   footerNav: FooterNavSection[];
 }
 
@@ -49,6 +59,54 @@ export const siteConfig: SiteConfig = {
     openSource:
       "This project is open-source software released under the MIT License.",
   },
+  mainNav: [
+    {
+      title: "Markets",
+      href: "/markets",
+      items: [
+        {
+          title: "Overview",
+          href: "/markets",
+          description: "Global market snapshot, major movers, and real-time performance.",
+        },
+        {
+          title: "Indices",
+          href: "/markets/indices",
+          description: "Track major world equity indices, futures, and benchmarks.",
+        },
+        {
+          title: "Sectors",
+          href: "/markets/sectors",
+          description: "Sector rotation, industry heatmaps, and relative strength.",
+        },
+      ],
+    },
+    {
+      title: "Research",
+      href: "/research",
+      items: [
+        {
+          title: "Screener",
+          href: "/research/screener",
+          description: "Filter equities by valuation, fundamentals, and technical metrics.",
+        },
+        {
+          title: "Financials",
+          href: "/research/financials",
+          description: "Deep-dive income statements, balance sheets, and cash flow statements.",
+        },
+        {
+          title: "Filings",
+          href: "/research/filings",
+          description: "SEC filings, 10-K/10-Q reports, and institutional transcripts.",
+        },
+      ],
+    },
+    {
+      title: "Watchlist",
+      href: "/watchlist",
+    },
+  ],
   footerNav: [
     {
       title: "Resources",
